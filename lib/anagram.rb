@@ -3,16 +3,14 @@ class Anagram
 
 attr_accessor :word
 
-@@all =[]
-
 def initialize(word)
   @word=word
-  @@all << @word
+
 end
 
-def match(list)
+def match(match_list)
   result=[]
-    list.each do |wordie|
+    match_list.each do |wordie|
     if wordie.split('').sort.join('') ==@word.split('').sort.join('')
       result << wordie
     end
